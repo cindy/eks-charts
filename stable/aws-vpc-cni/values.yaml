@@ -113,6 +113,8 @@ imagePullSecrets: []
 
 fullnameOverride: "aws-node"
 
+metricsPortName: "metrics"
+
 priorityClassName: system-node-critical
 
 podSecurityContext: {}

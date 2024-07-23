@@ -71,7 +71,7 @@ spec:
           image: {{ include "aws-vpc-cni.image" . }}
           ports:
             - containerPort: 61678
-              name: metrics
+              name: {{ .Values.metricsPortName | default "metrics"  }}
           livenessProbe:
 {{ toYaml .Values.livenessProbe | indent 12 }}
             timeoutSeconds: {{ .Values.livenessProbeTimeoutSeconds }}
